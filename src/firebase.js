@@ -1,19 +1,19 @@
+// src/firebase.js
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyCQsP-Ne_mxSX35X1Ehkcbzk3ZsyM2M_Qg",
+  authDomain: "max-lotto.firebaseapp.com",
+  projectId: "max-lotto",
+  storageBucket: "max-lotto.appspot.com",
+  messagingSenderId: "285806075654",
+  appId: "1:285806075654:web:eb599737438e8c86830887"
 };
 
+// Inizializza Firebase
 const app = initializeApp(firebaseConfig);
 
-const auth = getAuth(app);
-const db = getFirestore(app); // <- Aggiunto db
-
-export { auth, db };
+// Inizializza Auth
+export const auth = getAuth(app);
